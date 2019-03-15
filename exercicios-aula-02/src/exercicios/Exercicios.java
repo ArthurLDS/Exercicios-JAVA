@@ -1,6 +1,8 @@
 package exercicios;
 
 import utils.LerEntrada;
+import utils.Pessoa;
+import utils.PessoaUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -56,7 +58,7 @@ public class Exercicios {
 
         for (int i = 0; i < frase.length(); i++) {
             String cAtual = String.valueOf(frase.charAt(i));
-            if(cAtual.matches(VOGAIS))
+            if (cAtual.matches(VOGAIS))
                 countVogais++;
             else
                 countConsoantes++;
@@ -68,31 +70,46 @@ public class Exercicios {
 
 
     // Crie um programa que receba uma palavra e informe se a mesma é um palíndromo;
-    public static void runExercicio5(){
+    public static void runExercicio5() {
         System.out.println("Digite uma palavra: ");
         String palavra = LerEntrada.lerString();
 
         String palavraInvertida = "";
-        for(int i=palavra.length()-1; i>=0; i--){
+        for (int i = palavra.length() - 1; i >= 0; i--) {
             palavraInvertida += palavra.charAt(i);
         }
 
         System.out.println(palavraInvertida);
 
-        if(palavra.equals(palavraInvertida)){
+        if (palavra.equals(palavraInvertida)) {
             System.out.println("PALAVRA É UM PALINDROMO");
         } else {
             System.out.println("NÃO É UM PALINDROMO");
         }
     }
 
+    // 6 - Crie um programa que peça para o usuário o nome, a altura e o peso de duas pessoas e apresente o nome da mais pesada e o nome da mais alta;
+    public static void runExercicio6() {
+        List<Pessoa> pessoas = new ArrayList<>();
+
+        pessoas.add(PessoaUtils.lerDadosPessoa());
+        pessoas.add(PessoaUtils.lerDadosPessoa());
+
+        Pessoa pessoaMaisAlta = PessoaUtils.getPessoaMaisAlta(pessoas);
+        Pessoa pessoaMaisPesada = PessoaUtils.getPessoaPesada(pessoas);
+
+        System.out.println("Pessoa mais alta é  : " + pessoaMaisAlta.getNome());
+        System.out.println("Pessoa mais pesada é: " + pessoaMaisPesada.getNome());
+    }
+
+
     // 8 -  Crie um programa que peça para o usuário o nome, a altura e o peso de duas pessoas e apresente o nome da mais pesada e o nome da mais alta
-    public static void runExercicio6(){
+    public static void runExercicio8() {
         System.out.println("Digite um valor: ");
         int valor = LerEntrada.lerInt();
 
-        for(int i=0; i<=valor; i++){
-            
+        for (int i = 0; i <= valor; i++) {
+
         }
 
     }
