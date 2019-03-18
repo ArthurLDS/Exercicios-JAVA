@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Exercicios {
 
-    // Crie um programa que receba dois n�meros inteiros e exiba qual deles � o menor;
+    // 1 - Crie um programa que receba dois n�meros inteiros e exiba qual deles � o menor;
     public static void runExercicio1() {
         System.out.println("Digite o primeiro valor: ");
         int valor1 = LerEntrada.lerInt();
@@ -20,7 +20,7 @@ public class Exercicios {
         System.out.print("Menor valor: " + ((valor1 < valor2) ? valor1 : valor2));
     }
 
-    //  Crie um programa que receba cinco números inteiros e exiba qual deles é o maior;
+    //  2- Crie um programa que receba cinco números inteiros e exiba qual deles é o maior;
     public static void runExercicio2() {
         List valores = new ArrayList<>();
         for (int i = 0; i <= 4; i++) {
@@ -30,7 +30,7 @@ public class Exercicios {
         System.out.print("Maior valor: " + Collections.max(valores));
     }
 
-    //  Crie um programa que receba 2 palavras como parâmetro e indique qual é a mais comprida e qual é a mais curta (ou se ambas têm o mesmo tamanho)
+    //  3 - Crie um programa que receba 2 palavras como parâmetro e indique qual é a mais comprida e qual é a mais curta (ou se ambas têm o mesmo tamanho)
     public static void runExercicio3() {
         System.out.println("Digite a primeira palavra: ");
         String primeiraPalavra = LerEntrada.lerString();
@@ -69,7 +69,7 @@ public class Exercicios {
     }
 
 
-    // Crie um programa que receba uma palavra e informe se a mesma é um palíndromo;
+    // 5 - Crie um programa que receba uma palavra e informe se a mesma é um palíndromo;
     public static void runExercicio5() {
         System.out.println("Digite uma palavra: ");
         String palavra = LerEntrada.lerString();
